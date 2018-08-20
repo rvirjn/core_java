@@ -1,0 +1,15 @@
+
+
+<project default="main">
+ 		<target name="ant1" depends="ant">
+ 			<javac srcdir="../ant1/src" destdir="bin"/>
+		</target>
+	
+<target name="ant">
+	<javac srcdir="../Ant/src" destdir="bin"/>
+</target>
+	
+		<target name="main" depends="ant1">
+			<java classpath="bin" classname="pack1.A"/>
+		</target>
+</project>
