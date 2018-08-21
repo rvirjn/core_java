@@ -1,8 +1,0 @@
-Accessing elements are faster with ArrayList, because it is index based. 
-But accessing is difficult with LinkedList. It is slow access.
- This is to access any element, you need to navigate through the elements one by one.
-  But insertion and deletion is much faster with LinkedList, because if you know the node,
-   just change the pointers before or after nodes. Insertion and deletion is slow with ArrayList,
-    this is because, during these operations ArrayList need to adjust the indexes according to deletion or insetion 
-    if you are performing on middle indexes. Means, an ArrayList having 10 elements, if you are inserting at index 5, 
-    then you need to shift the indexes above 5 to one more. - 
