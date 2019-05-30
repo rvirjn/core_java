@@ -23,5 +23,26 @@ public int hashCode(){
 	int hashcode=s1.hashCode();
 	return hashcode;
 }
+@Override
+protected void finalize() throws Throwable {
+        try{
+            System.out.println("Inside Finalize() method of Sub Class : A");
+            }
+        catch(Throwable t){
+            throw t;
+            }
+        finally{
+            System.out.println("Calling finalize() method of Super Class:  Object");
+            super.finalize();
+        }
+}
+public static void main(String[] args) throws Throwable
+{
+	A a1 = new A(1);
+	Runtime.getRuntime().gc();
+	System.gc();
+	a1.finalize();
+}
+	
 }
 
